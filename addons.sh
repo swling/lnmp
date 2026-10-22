@@ -227,7 +227,8 @@ Download_PHP_Src()
     else
         echo "Notice: php-${Cur_PHP_Version}.tar.bz2 not found!!!download now..."
         Get_Country
-        if [ "${country}" = "CN" ]; then
+        # 均从官网下载
+        if [ "${country}" = "CN" ] && false; then
             Download_Files http://php.vpszt.com/php-${Cur_PHP_Version}.tar.bz2 php-${Cur_PHP_Version}.tar.bz2
             if [ $? -ne 0 ]; then
                 Download_Files https://www.php.net/distributions/php-${Cur_PHP_Version}.tar.bz2 php-${Cur_PHP_Version}.tar.bz2

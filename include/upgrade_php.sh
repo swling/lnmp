@@ -32,7 +32,8 @@ Start_Upgrade_PHP()
     else
         echo "Notice: php-$php_version.tar.bz2 not found!!!download now..."
         Get_Country
-        if [ "${country}" = "CN" ]; then
+        # 均从官方下载
+        if [ "${country}" = "CN" ] && false; then
             Download_Files http://php.vpszt.com/php-${php_version}.tar.bz2 php-${php_version}.tar.bz2
             if [ $? -ne 0 ]; then
                 Download_Files https://www.php.net/distributions/php-${php_version}.tar.bz2 php-${php_version}.tar.bz2

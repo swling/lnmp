@@ -1220,7 +1220,7 @@ Upgrade_PHP()
         Upgrade_PHP_81
     elif echo "${php_version}" | grep -Eqi '^8.2.';then
         Upgrade_PHP_82
-    elif echo "${php_version}" | grep -Eqi '^8.3.';then
+    elif echo "${php_version}" | grep -Eqi '^8.[345].';then
         Upgrade_PHP_83
     else
         Echo_Red "PHP version: ${php_version} is not supported."

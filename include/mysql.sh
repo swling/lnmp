@@ -783,9 +783,9 @@ Install_MySQL_84()
     rm -f /etc/my.cnf
     if [ "${Bin}" = "y" ]; then
         Echo_Blue "[+] Installing ${Mysql_Ver} Using Generic Binaries..."
-        Tar_Cd ${Mysql_Ver}-linux-glibc2.17-${DB_ARCH}.tar.xz
+        Tar_Cd ${Mysql_Ver}-linux-glibc2.28-${DB_ARCH}.tar.xz
         mkdir /usr/local/mysql
-        mv ${Mysql_Ver}-linux-glibc2.17-${DB_ARCH}/* /usr/local/mysql/
+        mv ${Mysql_Ver}-linux-glibc2.28-${DB_ARCH}/* /usr/local/mysql/
     else
         Echo_Blue "[+] Installing ${Mysql_Ver} Using Source code..."
         Tar_Cd ${Mysql_Ver}.tar.gz ${Mysql_Ver}
